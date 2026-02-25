@@ -71,7 +71,7 @@ public class FilterOperations {
 class Employee {
         String name;
         String dept;
-        int salary;
+        Integer salary;
 
         public Employee(String name, String dept, int salary) {
                 this.name = name;
