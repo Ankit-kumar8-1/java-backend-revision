@@ -1,6 +1,6 @@
 package java8.DefaultAndStatic;
 
-public class DimandProblem {
+public class DiamondProblem {
     public static void main(String[] args) {
         A a = new A();
         a.move();
