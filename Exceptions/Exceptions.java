@@ -51,11 +51,14 @@ public class Exceptions {
         Boy boy2 = new Boy(null, null);
         Boy vBoy = null;
 
-        // custom exception
-        if (vBoy == null) {
-            throw new UserNotFoundException("User not found ");
-        } else {
-            System.out.println(" name  : " + boy2.name + "Happy Or Not : " + boy2.happyOrNot);
+        try { // custom exception
+            if (vBoy == null) {
+                throw new UserNotFoundException("User not found ");
+            } else {
+                System.out.println(" name  : " + boy2.name + "Happy Or Not : " + boy2.happyOrNot);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
 
         System.out.println("Hello Ji ");
@@ -64,6 +67,7 @@ public class Exceptions {
 
     public static void divison() throws Exception {
         System.out.println(8 / 0);
+
     }
 }
 
@@ -71,9 +75,17 @@ class Boy {
     String name;
     String happyOrNot;
 
-    Boy(String name, String happyOrNot) {
+    Boy(String name, String happyOrNot) throws Exception {
         this.name = name;
         this.happyOrNot = happyOrNot;
+    }
+
+}
+
+class little extends Boy {
+
+    little() throws Exception {
+        super("rohit", "happy");
     }
 
 }
