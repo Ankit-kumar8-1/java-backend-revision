@@ -1,7 +1,5 @@
 package Oops;
 
-import java.util.Optional;
-
 public class Oops {
     public static void main(String[] args) {
 
@@ -10,6 +8,40 @@ public class Oops {
         C c = new C("Amit");
         c.getFatherName();
 
+        Animal a = new Dog();
+        a.sound();
+
+        Payment p = new UpiPayment();
+        p.pay();
+
+    }
+}
+
+interface Payment {
+    void pay();
+}
+
+class UpiPayment implements Payment {
+
+    public void pay() {
+        System.out.println("Payment via UPI");
+    }
+}
+
+abstract class Animal {
+
+    abstract void sound(); // abstract method (no body)
+
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
     }
 }
 
@@ -43,4 +75,16 @@ class C extends A {
     void getFatherName() {
         System.out.println("your father name is : " + giveName(fatherName));
     }
+}
+
+class D extends B {
+
+    D(String name) {
+        super(name);
+    }
+
+    void callParentVaribale() {
+        super.name = "Rohit";
+    }
+
 }
