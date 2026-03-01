@@ -11,6 +11,7 @@ public class AbstractClass {
         Encapsulation user = new Encapsulation();
         user.TrasnderMoney(900, 11);
         System.out.println(user.getBalance());
+
     }
 }
 
