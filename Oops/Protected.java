@@ -12,3 +12,9 @@ class A {
     protected int a = 0;
 
 }
+
+interface k {
+    default int trest() {
+        return 3;
+    }
+}
