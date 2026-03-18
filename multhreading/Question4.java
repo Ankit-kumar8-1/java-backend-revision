@@ -31,8 +31,8 @@ public class Question4 {
         // t1.start();
         // t2.start();
 
-        Helper2 call1 = new Helper2();
-        Helper2 call2 = new Helper2();
+        Helper2 call1 = new Helper2(); // | -> dono parallel he chalenge kyoki dono alag alag
+        Helper2 call2 = new Helper2(); // | object ka use kar rahe mean do thread aalg alag object per
 
         call1.method1();
         call2.method2();
